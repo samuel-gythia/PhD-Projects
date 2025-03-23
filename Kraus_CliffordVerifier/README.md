@@ -8,6 +8,7 @@ This demo provides a **mock** implementation of Prof. Kraus’s adaptive verif
 - **Threshold:** 0.90  
 - **Sweep:** 50 shots per iteration, up to 1000 shots.  
 
+![adaptive_verification_plot](adaptive_verification_plot.png)
 ## How to Run
 
 ```bash
