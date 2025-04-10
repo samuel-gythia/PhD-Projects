@@ -7,11 +7,13 @@ in minimal Bose–Hubbard models.
 - Exact diagonalization for 2 bosons on 2 sites.
 
 
+
 ![bloch_BH2_spectrum](bloch_BH2_spectrumpect)m.png`.
 
 ## Project 2: 4‑Site Chain Number Fluctuations
 - Exact diagonalization for 4 bosons on 4 sites.
 - Compute ⟨n²⟩–⟨n⟩² vs. U/J for each si
+
 
 ![bloch_BH4_fluctuations](bloch_BH4_fluctuationsfluc)ations.png`.
 
