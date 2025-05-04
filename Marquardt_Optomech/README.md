@@ -46,3 +46,9 @@ Ensure QuTiP is installed in your conda environment.
 ```bash
 conda activate qc-env
 jupyter lab
+
+### Reference
+
+F. Marquardt, J.P. Chen, A.A. Clerk, S.M. Girvin,
+“Quantum Theory of Cavity-Assisted Sideband Cooling of Mechanical Motion”,
+Phys. Rev. Lett. 99, 093902 (2007)
