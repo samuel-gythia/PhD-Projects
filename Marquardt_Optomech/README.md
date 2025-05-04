@@ -10,7 +10,9 @@ Simulates the time evolution of the average phonon number ⟨n⟩ under two diff
 - **Doppler-like regime** (κ ≫ ωₘ)
 
 **Figure:**  
-![photon_decay](phonon_decay.png)  
+
+![photon_decay](phonon_decay.png) 
+
 Depicts phonon decay trajectories for each regime using QuTiP's `mesolve`.
 
 ---
@@ -23,6 +25,7 @@ Depicts phonon decay trajectories for each regime using QuTiP's `mesolve`.
 - Compares optimal cooling conditions in both regimes.
 
 **Figure:**  
+
 ![cooling_vs_detuning](cooling_vs_detuning.png)
 
 ---
@@ -34,7 +37,9 @@ Depicts phonon decay trajectories for each regime using QuTiP's `mesolve`.
   - Final cooled state (n ≈ 0.5)
 
 **Figure:**  
+
 ![wigner_thermal_vs_cooled](wigner_thermal_vs_cooled.png)  
+
 Generated using Gaussian approximations for clarity.
 
 ---
