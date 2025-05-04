@@ -11,7 +11,7 @@ Simulates the time evolution of the average phonon number ⟨n⟩ under two diff
 
 **Figure:**  
 
-![photon_decay](phonon_decay.png) 
+![phonon_decay](phonon_decay.png) 
 
 Depicts phonon decay trajectories for each regime using QuTiP's `mesolve`.
 
