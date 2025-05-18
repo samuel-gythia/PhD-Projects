@@ -20,7 +20,7 @@ The output below shows exponential decay of coupling efficiency with increasing 
 
 \## To Run
 
-\> in anaconda prompt
+\> bash
 
 conda activate qc-env
 
