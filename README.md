@@ -1,9 +1,46 @@
 # PhD-Projects
 
-This repository contains outreach demo projects for prospective advisors.
+This repository contains targeted demo projects developed as part of PhD outreach to selected faculty in quantum computing and simulation.  
+Each folder corresponds to one professor and contains two concise research-aligned mockups, including Jupyter notebooks, plots, and READMEs.
 
-- **Benson_FDTD/** – FDTD coupling efficiency mock  
-- **Benson_RingModulator/** – Microring phase‑flip demo  
-- **Reinhard_NV_Ramsey/** – (coming soon)
+## Project Index
 
-Each folder has its own notebook, assets, and README.
+### Prof. Benson – Hybrid Photonic Coupling
+- [`Benson_FDTD/`](./Benson_FDTD): Mocked FDTD simulation of waveguide-ring coupling efficiency.
+- [`Benson_RingModulator/`](./Benson_RingModulator): Tidy3D-inspired microring phase modulation demo.
+
+### Prof. Reinhard – NV Center Probes
+- [`Reinhard_VectorMapping/`](./Reinhard_VectorMapping): QuTiP simulation of Ramsey vector field mapping with NV centers.
+- [`Reinhard_NV_Ramsey/`](./Reinhard_NV_Ramsey): Diamond probe design prototype for vector magnetometry (coming soon).
+
+### Prof. Kraus – Clifford Verification & ML Confidence
+- [`Kraus_CliffordVerifier/`](./Kraus_CliffordVerifier): Adaptive statistical protocol for distinguishing Clifford and non-Clifford gates.
+- [`Kraus_MLConfidence/`](./Kraus_MLConfidence): ML classifier estimating circuit verification confidence under depolarizing noise.
+
+### Prof. Bloch – Bose-Hubbard Mott Transition
+- [`Bloch_MottTransition/`](./Bloch_MottTransition): 
+  - 2-site ED spectrum vs U/J,
+  - 4-site number fluctuation decay across Mott transition.
+
+### Prof. Aidelsburger – Continuous Variable Squeezing
+- [`Aidelsburger_CV/`](./Aidelsburger_CV): 
+  - Single & two-mode squeezed vacuum simulations,
+  - Cluster state Wigner reconstructions.
+
+### Prof. Marquardt – Optomechanical Cooling
+- [`Marquardt_Optomech/`](./Marquardt_Optomech): 
+  - Sideband cooling vs Doppler regime,
+  - Wigner plots of thermal vs cooled phonon states.
+
+### Prof. Schwinger – Circuit QED Entanglement
+- [`Schwinger_CQED/`](./Schwinger_CQED): 
+  - Jaynes–Cummings model oscillator dynamics,
+  - Dicke model visualization of symmetric eigenstates.
+
+---
+
+## How to Run
+Activate the environment and launch Jupyter Lab:
+```bash
+conda activate qc-env
+jupyter lab
