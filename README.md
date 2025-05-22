@@ -32,10 +32,10 @@ Each folder corresponds to one professor and contains two concise research-align
   - Sideband cooling vs Doppler regime,
   - Wigner plots of thermal vs cooled phonon states.
 
-### Prof. Schwinger – Circuit QED Entanglement
-- [`Schwinger_CQED/`](./Schwinger_CQED): 
-  - Jaynes–Cummings model oscillator dynamics,
-  - Dicke model visualization of symmetric eigenstates.
+### Prof. Schwinger – Lattice Gauge Simulation
+- [`Schwinger_Model/`](./Schwinger_Model):
+  - Ground-state entanglement entropy vs. fermion mass.
+  - Quench dynamics showing string breaking and gauge-matter oscillations.
 
 ---
 
