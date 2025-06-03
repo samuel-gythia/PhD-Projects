@@ -1,6 +1,6 @@
 # Continuous Variable Quantum Optics Simulation
 
-This simulation demonstrates squeezed vacuum dynamics and continuous variable cluster states, visualizing the quantum mechanical properties through Wigner functions.
+This simulation demonstrates squeezed vacuum dynamics and continuous variable cluster states, inspired by the research of Prof. Monika Aidelsburger on quantum simulation with ultracold atoms and engineered gauge fields.
 
 ## Scientific Background
 
@@ -9,6 +9,7 @@ Continuous variable quantum optics explores quantum states with continuous eigen
 - Single-mode and two-mode squeezing operations that reduce uncertainty in selected quadratures
 - Generation of CV cluster states as a resource for measurement-based quantum computing
 - Visualization of non-classical features through phase-space representations
+- Applications to quantum simulation with engineered gauge fields
 
 ## Implementation Details
 
@@ -37,6 +38,11 @@ The simulation uses QuTiP to model:
 
 - **CV Cluster State Wigner Functions:**
   ![wigner_cluster_modes](wigner_cluster_modes.png)
+
+## References
+
+Aidelsburger, M., et al. "Artificial gauge fields with ultracold atoms," *Rep. Prog. Phys.* **81**, 064401 (2018).  
+[DOI:10.1088/1361-6455/aac120](https://doi.org/10.1088/1361-6455/aac120)
 
 ## How to Run
 
