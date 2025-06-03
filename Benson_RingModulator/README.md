@@ -1,21 +1,48 @@
-# Project: Microring Modulator Phase‑Flip Demo
+# Microring Modulator Phase-Flip Demonstration
 
-Inspired by photonic QEC schemes in hybrid devices :contentReference[oaicite:2]{index=2}:contentReference[oaicite:3]{index=3}, this notebook
-demonstrates a simple phase‑flip operation via a tunable microring modulator.
+This simulation demonstrates how a microring resonator can be used to implement a quantum phase-flip operation through refractive index modulation, relevant for photonic quantum error correction schemes.
 
-## Objective
-To show how a refractive‑index change (Δn) in the ring induces a π phase shift
-(|1⟩→–|1⟩) in a dual‑rail encoding.
+## Scientific Background
 
-## Mock Model
-We use a sinusoidal proxy:
-$$\eta(Δn) = \cos^2\!\bigl(\tfrac{2π·Δn·L}{λ}\bigr),$$
-where \(L=2π·R\) is the ring circumference.
+Photonic quantum computing requires reliable methods to manipulate quantum states. This simulation explores:
 
-## Plot
+- Phase-flip operations (|1⟩→–|1⟩) in dual-rail encoded qubits
+- Microring resonators as tunable phase modulators
+- Relationship between refractive index changes and quantum phase shifts
+- Applications in photonic quantum error correction schemes
+
+## Implementation Details
+
+The simulation uses a simplified analytical model:
+
+1. The phase shift is modeled using a sinusoidal function of the refractive index change:
+   ```
+   η(Δn) = cos²(2π·Δn·L/λ)
+   ```
+   Where:
+   - L = 2π·R is the ring circumference
+   - λ is the wavelength of light
+   - Δn is the change in refractive index
+
+2. The model demonstrates:
+   - Periodic behavior of transmission with refractive index change
+   - Critical points where phase-flips occur (η = 0)
+   - Optimal operating regions for phase modulation
+
+## Performance Metrics
+
+The simulation visualizes how transmission efficiency varies with refractive index change:
+
 ![ring_modulator_mock](ring_modulator_mock.png)
 
-## To Run
-> bash
+The plot shows:
+- Complete extinction (η = 0) at specific Δn values, corresponding to perfect phase-flips
+- Periodic behavior allowing for multiple operating points
+- High sensitivity to small refractive index changes
+
+## How to Run
+
+```bash
 conda activate qc-env
 jupyter lab
+```

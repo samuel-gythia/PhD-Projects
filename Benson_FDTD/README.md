@@ -1,27 +1,45 @@
-﻿\# Project: Coupling Efficiency in Si₃N₄ Waveguide–Microring Systems
+﻿# Coupling Efficiency in Si₃N₄ Waveguide–Microring Systems
 
-This project explores coupling efficiency between a straight waveguide and a microring resonator using a simplified 2D photonic geometry. The structure is inspired by hybrid systems discussed in \*\*Lettner et al., ACS Photonics (2023)\*\*, which demonstrates precise dipole–cavity alignment for SiV centers in nanodiamonds coupled to Si₃N₄ photonic cavities.
+This simulation explores coupling efficiency between a straight waveguide and a microring resonator using a simplified 2D photonic geometry, inspired by hybrid systems for precise dipole–cavity alignment.
 
-\## Objective
+## Scientific Background
 
-To simulate and visualize how the waveguide–ring gap affects coupling efficiency in integrated photonic circuits. While this initial version uses a \*\*mock analytical model\*\* to demonstrate tunability, future iterations will incorporate \*\*full electromagnetic simulations\*\* using Meep or Tidy3D. (Tidy3D is used for our project.)
+Integrated photonic circuits require precise control of light coupling between components. This simulation:
 
-\## Plot
+- Models evanescent coupling between a straight waveguide and a microring resonator
+- Demonstrates how coupling efficiency depends exponentially on the gap distance
+- Relates to recent work in hybrid quantum photonic systems (Lettner et al., ACS Photonics 2023)
 
-The output below shows exponential decay of coupling efficiency with increasing gap, emulating evanescent field overlap:
+## Implementation Details
 
-![coupling\_vs\_gap](coupling\_vs\_gap\_mock.png)
+The current implementation uses a simplified analytical model:
 
-\## Reference
+1. Coupling efficiency is modeled as an exponential function of the gap distance:
+   ```python
+   efficiency = base_coupling * np.exp(-decay_rate * gap)
+   ```
 
-\> \*Lettner et al., "Hybrid SiV–nanodiamond–Si₃N₄ platform with full light–matter coupling control,"\* \*\*ACS Photonics\*\*, 2023.
+2. Parameters are chosen to match typical experimental values for Si₃N₄ photonic platforms
+   - Base coupling: 0.9 (90% maximum coupling)
+   - Decay rate: 0.5 μm⁻¹ (characteristic of evanescent field decay)
 
-\> https://arxiv.org/abs/2409.04252
+3. Future implementations will incorporate full electromagnetic simulations using Tidy3D
 
-\## To Run
+## Performance Metrics
 
-\> bash
+The simulation demonstrates how coupling efficiency decreases with increasing gap distance:
 
+![coupling_vs_gap](coupling_vs_gap_mock.png)
+
+## References
+
+> Lettner et al., "Hybrid SiV–nanodiamond–Si₃N₄ platform with full light–matter coupling control," **ACS Photonics**, 2023.
+>
+> https://arxiv.org/abs/2409.04252
+
+## How to Run
+
+```bash
 conda activate qc-env
-
 jupyter lab
+```

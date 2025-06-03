@@ -1,59 +1,62 @@
-# Marquardt_Optomech
+# Cavity Optomechanics Cooling Simulation
 
-This notebook reproduces core concepts from Prof. Florian Marquardt’s work on sideband cooling of mechanical motion via cavity optomechanics. Both resolved-sideband and Doppler cooling regimes are explored through Lindblad simulations, and the effects of detuning are analyzed quantitatively.
+This simulation reproduces core concepts from cavity optomechanics, focusing on sideband cooling of mechanical motion in different parameter regimes as pioneered in the work of Marquardt et al.
 
-## Project 1: Phonon Decay – Resolved vs Doppler Regimes
+## Scientific Background
 
-Simulates the time evolution of the average phonon number ⟨n⟩ under two different optical damping regimes:
+Cavity optomechanics studies the interaction between light and mechanical motion. This simulation explores:
 
-- **Resolved-sideband cooling** (κ ≪ ωₘ)
-- **Doppler-like regime** (κ ≫ ωₘ)
+- Cooling of mechanical oscillators using radiation pressure forces
+- Comparison between resolved-sideband (κ ≪ ωₘ) and Doppler (κ ≫ ωₘ) cooling regimes
+- Quantum limits of cooling as a function of cavity detuning
+- Phase-space representation of thermal and cooled mechanical states
 
-**Figure:**  
+## Implementation Details
 
-![phonon_decay](phonon_decay.png) 
+The simulation uses QuTiP's master equation solver to model the optomechanical system:
 
-Depicts phonon decay trajectories for each regime using QuTiP's `mesolve`.
+1. Phonon decay dynamics:
+   - Implements Lindblad master equation with optomechanical coupling
+   - Tracks average phonon number ⟨n⟩ over time
+   - Compares cooling rates in different parameter regimes
 
----
+2. Detuning optimization:
+   - Scans laser-cavity detuning (Δ) to find optimal cooling conditions
+   - Demonstrates different optimal detuning points for resolved vs. Doppler regimes
+   - Quantifies final phonon occupancy as a function of system parameters
 
-## Project 2: Cooling Limit vs Detuning + Wigner Comparison
+3. Wigner function visualization:
+   - Computes phase-space distributions for initial thermal and final cooled states
+   - Uses Gaussian approximations for clarity in visualization
 
-### A. Detuning Sweep
+## Performance Metrics
 
-- Scans final phonon number ⟨n⟩ as a function of laser detuning Δ.
-- Compares optimal cooling conditions in both regimes.
+The simulation produces three key visualizations:
 
-**Figure:**  
+- **Phonon Decay Dynamics:**
+  ![phonon_decay](phonon_decay.png)
+  
+  Shows cooling trajectories in different parameter regimes
 
-![cooling_vs_detuning](cooling_vs_detuning.png)
+- **Cooling Efficiency vs. Detuning:**
+  ![cooling_vs_detuning](cooling_vs_detuning.png)
+  
+  Demonstrates optimal detuning conditions for minimal phonon occupancy
 
----
+- **Wigner Function Comparison:**
+  ![wigner_thermal_vs_cooled](wigner_thermal_vs_cooled.png)
+  
+  Visualizes the quantum state transformation from thermal (n ≈ 10) to cooled (n ≈ 0.5)
 
-### B. Wigner Distributions
+## References
 
-- Visualizes phase-space distributions of:
-  - Initial thermal state (n ≈ 10)
-  - Final cooled state (n ≈ 0.5)
-
-**Figure:**  
-
-![wigner_thermal_vs_cooled](wigner_thermal_vs_cooled.png)  
-
-Generated using Gaussian approximations for clarity.
-
----
+F. Marquardt, J.P. Chen, A.A. Clerk, S.M. Girvin,
+"Quantum Theory of Cavity-Assisted Sideband Cooling of Mechanical Motion",
+Phys. Rev. Lett. 99, 093902 (2007)
 
 ## How to Run
-
-Ensure QuTiP is installed in your conda environment.
 
 ```bash
 conda activate qc-env
 jupyter lab
-
-### Reference
-
-F. Marquardt, J.P. Chen, A.A. Clerk, S.M. Girvin,
-“Quantum Theory of Cavity-Assisted Sideband Cooling of Mechanical Motion”,
-Phys. Rev. Lett. 99, 093902 (2007)
+```
